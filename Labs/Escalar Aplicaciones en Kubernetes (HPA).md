@@ -88,12 +88,13 @@ Ejecute el manifiesto:
 
 Ejecute un contenedor para lanzar desde allí carga al Pod de la aplicación de PHP:
 
-kubectl run -it --rm load-generator --image busybox /bin/sh
+    kubectl run -it --rm load-generator --image busybox /bin/sh
 
 una vez se encuentre en el Shell del Pod, ejecute la siguiente instrucción para iniciar la carga:
 
-while true; do wget -q -O-_http://php-apache; done
-Aparecerá un mensaje como el siguiente:
+    while true; do wget -q -O-_http://php-apache; done
+
+Aparecerá un mensaje como el siguiente
 
     while true; do wget -q -O- http://php-apache; done
     OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!OK!
